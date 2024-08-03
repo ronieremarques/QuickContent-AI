@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger AutoCreate Article</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SweetAlert2 CSS local -->
+    <link rel="stylesheet" href="libs/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Criar Artigo</h1>
+        <form id="articleForm">
+            <label for="email">Email de postagem:</label>
+            <input type="text" id="email" placeholder="Seu e-mail (@blogger.com)" required />
+            
+            <label for="keywords">Palavras chaves do assunto:</label>
+            <textarea id="keywords" rows="6" placeholder="Uma palavra-chave por linha..." required></textarea>
+            
+            <button type="submit" id="createButton">Criar Artigo</button>
+            <div id="progress"></div>
+        </form>
+    </div>
+    <!-- SweetAlert2 Script local -->
+    <script src="libs/sweetalert2.all.min.js"></script>
+    <!-- Seu Script -->
+    <script src="popup.js"></script>
+</body>
+</html>

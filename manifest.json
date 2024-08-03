@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "name": "QuickContent AI",
+    "description": "Essa extensão te ajuda a criar artigos pro seu blogger sem precisar de IA generativa.",
+    "author": "https://github.com/ronieremarques",
+    "action": {
+        "default_title": "QuickContent AI",
+        "default_icon": "img/icon48.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["index.html"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

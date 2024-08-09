@@ -50,7 +50,7 @@ document.getElementById('articleForm').addEventListener('submit', async (event) 
 
         // Verifica periodicamente o status da tarefa
         const checkStatus = async () => {
-            const statusResponse = await fetch(`http://blognetwork.discloud.app/api/taskstatus/${taskId}`);
+            const statusResponse = await fetch(`http://blognetwork-api-extension.squareweb.app/api/taskstatus/${taskId}`);
             const statusData = await statusResponse.json();
             
             if (statusData.status === 'completed') {

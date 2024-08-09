@@ -35,7 +35,7 @@ document.getElementById('articleForm').addEventListener('submit', async (event) 
 
     // Converte palavras-chave em uma string com parâmetros de consulta
     const query = keywords.map(kw => encodeURIComponent(kw)).join(',');
-    const url = `http://blognetwork-api-extension.squarecloudweb.app/api/createarticle?email=${encodeURIComponent(email)}&keywords=${query}`;
+    const url = `http://blognetwork-api-extension.squareweb.app/api/createarticle?email=${encodeURIComponent(email)}&keywords=${query}`;
 
     try {
         const response = await fetch(url, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
